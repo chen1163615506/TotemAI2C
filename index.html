@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TotemAI - Intelligent Creative Ecosystem Platform</title>
+    <script src="https://file.ljcdn.com/nebula/tailwindcss_3.4.16_1750069526172.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://file.ljcdn.com/nebula/font-awesome-6.4.0-all.min_1749456930282.css">
+    <style>
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #8B5CF6;
+            --accent-color: #06B6D4;
+            --background-dark: #0F172A;
+            --background-darker: #020617;
+            --surface-light: rgba(15, 23, 42, 0.8);
+            --surface-lighter: rgba(30, 41, 59, 0.6);
+            --text-primary: #F8FAFC;
+            --text-secondary: #CBD5E1;
+            --text-muted: #64748B;
+            --border-color: rgba(59, 130, 246, 0.2);
+            --glow-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%);
+            overflow-x: hidden;
+            line-height: 1.6;
+            font-weight: 400;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        
+        .glass-effect {
+            background: var(--surface-light);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 32px var(--glow-color);
+        }
+        
+        .glow-button {
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .tech-border {
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            opacity: 0.6;
+        }
+        
+        .particle-bg {
+            background: 
+                radial-gradient(circle at 25% 25%, var(--primary-color)15 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, var(--secondary-color)15 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, var(--accent-color)10 0%, transparent 50%);
+            background-size: 100px 100px, 150px 150px, 200px 200px;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                background-position: 0% 0%, 0% 0%, 0% 0%; 
+            }
+            33% { 
+                background-position: 30% 30%, -30% 70%, 70% -30%; 
+            }
+            66% { 
+                background-position: 70% -30%, 30% 30%, -30% 70%; 
+            }
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+        
+        .popular-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            animation: pulse-subtle 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        
+        .star-badge {
+            background: var(--surface-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            backdrop-filter: blur(20px);
+        }
+        
+        .star-icon {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+        }
+        
+        .time-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            height: 36px;
+            border-radius: 18px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+            animation: glow-subtle 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-subtle {
+            from { box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3); }
+            to { box-shadow: 0 6px 24px rgba(59, 130, 246, 0.4); }
+        }
+        
+        .time-badge.orange {
+            background: linear-gradient(135deg, #F59E0B, #EAB308);
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+            animation: glow-orange-subtle 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-orange-subtle {
+            from { box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3); }
+            to { box-shadow: 0 6px 24px rgba(245, 158, 11, 0.4); }
+        }
+        
+        .time-badge.purple {
+            background: linear-gradient(135deg, var(--secondary-color), #A855F7);
+            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);
+            animation: glow-purple-subtle 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-purple-subtle {
+            from { box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3); }
+            to { box-shadow: 0 6px 24px rgba(139, 92, 246, 0.4); }
+        }
+        
+        /* 统一按钮样式 */
+        button {
+            font-weight: 500;
+            letter-spacing: 0.025em;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* 统一卡片样式 */
+        .card {
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Liner Style Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+        }
+        
+        h1 { font-size: 3.5rem; font-weight: 700; }
+        h2 { font-size: 2.5rem; font-weight: 600; }
+        h3 { font-size: 1.875rem; font-weight: 600; }
+        
+        /* Liner Style Sections */
+        .section-spacing {
+            padding: 6rem 0;
+        }
+        
+        /* Enhanced Icon Containers */
+        .icon-container {
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.15) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .icon-container:hover::before {
+            opacity: 1;
+        }
+        
+        /* Liner Style Buttons */
+        .btn-liner {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+        
+        /* Liner Style Cards */
+        .card-liner {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-liner:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        
+        /* Improved Text Hierarchy */
+        .text-primary { color: #F8FAFC; }
+        .text-secondary { color: #CBD5E1; }
+        .text-muted { color: #64748B; }
+        
+        /* Better Spacing System */
+        .space-y-liner > * + * {
+            margin-top: 1.5rem;
+        }
+        
+        /* Enhanced Gradients */
+        .gradient-modern {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold gradient-text">TotemAI</h1>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-6 py-2 rounded-2xl font-medium glow-button">
+                        Start Free Trial
+                    </button>
+                    <button class="border border-indigo-500 text-indigo-400 px-6 py-2 rounded-2xl font-medium hover:bg-indigo-500/10 transition-all">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-72 pb-20 particle-bg">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h1 class="text-6xl font-bold mb-8 glow-text">TotemAI</h1>
+            <h2 class="text-4xl font-semibold mb-12 gradient-text">Intelligent Delivery Ecosystem in Minutes</h2>
+            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                Integrated MoMA, Pika, and Dex AI tools - turning ideas into reality, all in one place
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#pricing" class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg glow-button inline-block text-center">
+                    Get Started
+                </a>
+                <a href="#tools" class="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all inline-block text-center">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Combinations & Use Cases Section -->
+    <section id="tools" class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <!-- Three Tools Combination Content -->
+        <div class="max-w-4xl mx-auto px-6 mb-20 text-center">
+            <!-- Top Badge -->
+            <div class="flex justify-center mb-8">
+                <div class="star-badge inline-flex items-center space-x-3 px-6 py-3 rounded-full">
+                    <div class="w-8 h-8 star-icon rounded-full flex items-center justify-center">
+                        <i class="fas fa-star text-sm"></i>
+                    </div>
+                    <span class="font-bold text-lg">Infinite Trinity Combinations</span>
+                </div>
+            </div>
+            
+            <!-- Main Title -->
+            <h2 class="text-4xl lg:text-5xl mb-4 font-bold text-white">
+                Three Tools, Infinite Combinations
+            </h2>
+            
+            <!-- Subtitle -->
+            <h3 class="text-3xl lg:text-4xl mb-8 font-semibold gradient-text">
+                Unleash Limitless Possibilities
+            </h3>
+            
+            <!-- Description Text -->
+            <p class="text-xl leading-relaxed max-w-3xl mx-auto text-gray-300 mb-16">
+                MoMA, Pika, and Dex can be used individually or in combination, covering every scenario from idea to deployment, achieving the fastest requirement delivery.
+            </p>
+        </div>
+
+        <!-- Three Products Matrix -->
+        <div class="max-w-7xl mx-auto px-4 mb-20">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl p-8 hover-lift flex flex-col">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-6 tech-border icon-container">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">MoMA</h3>
+                    <p class="text-gray-400 mb-6">Product Manager's Intelligent Design Partner</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">AI-driven interactive prototype design that instantly visualizes ideas, generating prototypes from concept in one click</p>
+                    <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Smart Prototype Generation</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Flowchart Creation</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>PRD Document Output</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Aesthetic Design Priority</li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Try MoMA Now</span>
+                    </button>
+                </div>
+                <div class="glass-effect rounded-xl p-8 hover-lift flex flex-col">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center mb-6 tech-border icon-container">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Pika</h3>
+                    <p class="text-gray-400 mb-6">Zero-Barrier Web Application Generator</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">Natural language instantly transforms into interactive web applications, one-click publish online, empowering everyone to be a creator</p>
+                    <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Intelligent Page Generation</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Real-time Preview Interaction</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Quick Publish & Deploy</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Non-professional Friendly</li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
+                        <i class="fas fa-bolt"></i>
+                        <span>Try Pika Now</span>
+                    </button>
+                </div>
+                <div class="glass-effect rounded-xl p-8 hover-lift flex flex-col">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-6 tech-border icon-container">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Dex</h3>
+                    <p class="text-gray-400 mb-6">Developer's AI Programming Assistant</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">Professional IDE plugin that multiplies programming efficiency, the perfect combination of AI and human intelligence</p>
+                    <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Intelligent Code Writing</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>AI Conversation Q&A</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Agent Mode Programming</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Professional Dev Optimization</li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Try Dex Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>        
+
+        <!-- Use Cases Showcase Content -->
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Divider Line -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-16"></div>
+            
+            <!-- Rapid Idea Validation -->
+            <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+                <div class="grid lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-3">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center shadow-lg icon-container">
+                                <i class="fas fa-lightbulb text-3xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <h3 class="text-4xl font-bold text-white">Rapid Idea Validation</h3>
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock mr-2"></i>5min
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Got a new idea but unsure if it's feasible? Use MoMA or Pika to quickly generate interactive demo prototypes and instantly validate your creative concepts.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <button class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
+                                        <i class="fas fa-palette"></i>
+                                        <span>MoMA Prototype Design</span>
+                                    </button>
+                                    <button class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
+                                        <i class="fas fa-code"></i>
+                                        <span>Pika Quick Generation</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-2">
+                        <div class="glass-effect rounded-2xl p-6 border border-purple-500/30 shadow-lg">
+                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                <i class="fas fa-bullseye mr-3 text-purple-400"></i>Use Cases
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Startup Idea Validation</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Product Feature Testing</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">User Experience Prototype</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Investor Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Simple Project Development -->
+            <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-green-500/20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+                <div class="grid lg:grid-cols-5 gap-8 items-center">
+                    <!-- Left Project Types -->
+                    <div class="lg:col-span-2">
+                        <div class="glass-effect rounded-2xl p-6 border border-green-500/30 shadow-lg">
+                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                <i class="fas fa-folder-open mr-3 text-green-400"></i>Project Types
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Corporate Website</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Personal Portfolio</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Simple Games</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Event Pages</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="lg:col-span-3">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg icon-container">
+                                <i class="fas fa-globe text-3xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <h3 class="text-4xl font-bold text-white">Simple Project Development</h3>
+                                    <div class="time-badge orange">
+                                        <i class="fas fa-clock mr-2"></i>30min
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Need to quickly build a website, simple game, or showcase page? The perfect combination is MoMA for prototyping, Pika for code generation and one-click publishing.</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <button class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
+                                        <i class="fas fa-palette"></i>
+                                        <span>MoMA Prototype Design</span>
+                                    </button>
+                                    <button class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
+                                        <i class="fas fa-code"></i>
+                                        <span>Pika Code Generation & Publish</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Complex Project Solutions -->
+            <div class="glass-effect rounded-3xl p-8 shadow-xl border border-indigo-500/20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+                <div class="grid lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-3">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg icon-container">
+                                <i class="fas fa-cogs text-3xl text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <h3 class="text-4xl font-bold text-white">Complex Project Solutions</h3>
+                                    <div class="time-badge purple">
+                                        <i class="fas fa-clock mr-2"></i>24 hours
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Building full-featured applications? Two approaches available: MoMA+Pika+Dex combined development, or MoMA+Dex combination development, meeting enterprise-level project requirements.</p>
+                                
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
+                                            <i class="fas fa-users mr-2 text-purple-400"></i>Approach 1: Team Collaboration
+                                        </h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                                <i class="fas fa-palette"></i>
+                                                <span>MoMA Prototype</span>
+                                            </span>
+                                            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                                <i class="fas fa-code"></i>
+                                                <span>Pika Frontend</span>
+                                            </span>
+                                            <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                                <i class="fas fa-server"></i>
+                                                <span>Dex Backend</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
+                                            <i class="fas fa-layer-group mr-2 text-purple-400"></i>Approach 2: Full-Stack Development
+                                        </h4>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                                <i class="fas fa-palette"></i>
+                                                <span>MoMA Prototype</span>
+                                            </span>
+                                            <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                                <i class="fas fa-code-branch"></i>
+                                                <span>Dex Full-Stack Dev</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-2">
+                        <div class="glass-effect rounded-2xl p-6 border border-indigo-500/30 shadow-lg">
+                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                <i class="fas fa-star mr-3 text-indigo-400"></i>Complex Project Features
+                            </h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">User System Integration</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">Database Setup</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">API Development</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                                    <span class="text-gray-300 font-medium">High Concurrency Handling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section id="pricing" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-20">Choose Your Perfect Plan</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Free</h3>
+                    <div class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-400">/month</span></div>
+                    <p class="text-gray-400 mb-8">Basic features for personal use</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Limited tool usage</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Basic features</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Community support</li>
+                    </ul>
+                    <button class="w-full border border-gray-500 text-gray-300 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-all mt-auto">
+                        Get Started
+                    </button>
+                </div>
+                <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Pro</h3>
+                    <div class="text-4xl font-bold mb-6">$29<span class="text-lg text-gray-400">/month</span></div>
+                    <p class="text-gray-400 mb-8">Complete features, team collaboration</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Full access to all three tools</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>All features unlocked</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Priority technical support</li>
+                    </ul>
+                    <button class="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold glow-button mt-auto">
+                        Upgrade Now
+                    </button>
+                </div>
+                <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <div class="text-4xl font-bold mb-6">Custom<span class="text-lg text-gray-400"> Plan</span></div>
+                    <p class="text-gray-400 mb-8">Enterprise-grade solutions</p>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Unlimited usage</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Private deployment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Custom development</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Dedicated account manager</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-semibold transition-all mt-auto">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-r from-indigo-900/30 to-purple-900/30">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-5xl font-bold mb-6 glow-text">Ready to Build Something Amazing?</h2>
+            <p class="text-xl text-gray-300 mb-12">Join thousands of developers and creators worldwide</p>
+            <div class="flex justify-center space-x-6">
+                <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-10 py-4 rounded-2xl font-semibold text-lg glow-button">
+                    Start Free Trial
+                </button>
+                <button class="border border-indigo-500 text-indigo-400 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all">
+                    Book Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-16 glass-effect">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold gradient-text mb-4">TotemAI</h3>
+                <p class="text-gray-400 mb-8">Intelligent Creative Ecosystem Platform - Where Ideas Come to Life</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2024 TotemAI. All rights reserved. | From Idea to Reality, All in One Place
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
