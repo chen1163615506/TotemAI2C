@@ -281,13 +281,16 @@
                 <div class="flex items-center">
                     <h1 class="text-2xl font-bold gradient-text">TotemAI</h1>
                 </div>
-                <div class="flex space-x-4">
-                    <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-6 py-2 rounded-2xl font-medium glow-button">
-                        Start Free Trial
-                    </button>
-                    <button class="border border-indigo-500 text-indigo-400 px-6 py-2 rounded-2xl font-medium hover:bg-indigo-500/10 transition-all">
-                        Watch Demo
-                    </button>
+                <div class="flex items-center space-x-2">
+                    <!-- Language Toggle Switch -->
+                    <div class="relative flex items-center bg-gray-800 border border-gray-600 rounded-lg p-1">
+                        <button id="langEN" class="lang-switch px-3 py-1 rounded-md text-sm font-medium transition-all duration-300 text-white bg-gray-700 border border-gray-500" data-lang="en">
+                            EN
+                        </button>
+                        <button id="langZH" class="lang-switch px-3 py-1 rounded-md text-sm font-medium transition-all duration-300 text-gray-400 hover:text-gray-300" data-lang="zh">
+                            中文
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -297,15 +300,15 @@
     <section class="relative pt-72 pb-20 particle-bg">
         <div class="max-w-4xl mx-auto text-center px-4">
             <h1 class="text-6xl font-bold mb-8 glow-text">TotemAI</h1>
-            <h2 class="text-4xl font-semibold mb-12 gradient-text">Intelligent Delivery Ecosystem in Minutes</h2>
-            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
-                Integrated MoMA, Pika, and Dex AI tools - turning ideas into reality, all in one place
+            <h2 class="text-4xl font-semibold mb-12 gradient-text" data-en="Intelligent Delivery Ecosystem in Minutes" data-zh="分钟级智能交付生态平台">Intelligent Delivery Ecosystem in Minutes</h2>
+            <p class="text-xl text-gray-300 mb-12 leading-relaxed" data-en="Each tool has limitations alone, but together they create the perfect workflow - where one tool's weakness becomes another's strength" data-zh="个人开发三件套：Moma、Pika、Haku，从想法到现实，一站式交付">
+                Each tool has limitations alone, but together they create the perfect workflow - where one tool's weakness becomes another's strength
             </p>
             <div class="flex justify-center space-x-6">
-                <a href="#pricing" class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg glow-button inline-block text-center">
+                <a href="#pricing" class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold text-lg glow-button inline-block text-center" data-en="Get Started" data-zh="开始使用">
                     Get Started
                 </a>
-                <a href="#tools" class="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all inline-block text-center">
+                <a href="#tools" class="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all inline-block text-center" data-en="Learn More" data-zh="了解更多">
                     Learn More
                 </a>
             </div>
@@ -316,29 +319,18 @@
     <section id="tools" class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <!-- Three Tools Combination Content -->
         <div class="max-w-4xl mx-auto px-6 mb-20 text-center">
-            <!-- Top Badge -->
-            <div class="flex justify-center mb-8">
-                <div class="star-badge inline-flex items-center space-x-3 px-6 py-3 rounded-full">
-                    <div class="w-8 h-8 star-icon rounded-full flex items-center justify-center">
-                        <i class="fas fa-star text-sm"></i>
-                    </div>
-                    <span class="font-bold text-lg">Infinite Trinity Combinations</span>
-                </div>
-            </div>
+
             
             <!-- Main Title -->
-            <h2 class="text-4xl lg:text-5xl mb-4 font-bold text-white">
-                Three Tools, Infinite Combinations
+            <h2 class="text-3xl lg:text-4xl mb-4 font-bold text-white" data-en="Product Matrix" data-zh="产品生态矩阵">
+                Product Matrix
             </h2>
             
-            <!-- Subtitle -->
-            <h3 class="text-3xl lg:text-4xl mb-8 font-semibold gradient-text">
-                Unleash Limitless Possibilities
-            </h3>
+
             
             <!-- Description Text -->
-            <p class="text-xl leading-relaxed max-w-3xl mx-auto text-gray-300 mb-16">
-                MoMA, Pika, and Dex can be used individually or in combination, covering every scenario from idea to deployment, achieving the fastest requirement delivery.
+            <p class="text-xl leading-relaxed max-w-3xl mx-auto text-gray-300 mb-16" data-en="While each tool excels in its domain, they have deliberate limitations. But when combined, they eliminate each other's weaknesses, creating an unstoppable creative ecosystem." data-zh="三大核心产品，构建完整的AI驱动开发生态系统">
+                While each tool excels in its domain, they have deliberate limitations. But when combined, they eliminate each other's weaknesses, creating an unstoppable creative ecosystem.
             </p>
         </div>
 
@@ -350,17 +342,17 @@
                         <i class="fas fa-palette text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 gradient-text">MoMA</h3>
-                    <p class="text-gray-400 mb-6">Product Manager's Intelligent Design Partner</p>
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">AI-driven interactive prototype design that instantly visualizes ideas, generating prototypes from concept in one click</p>
+                    <p class="text-gray-400 mb-6" data-en="Product Manager's Intelligent Design Partner" data-zh="产品经理的智能设计伙伴">Product Manager's Intelligent Design Partner</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed" data-en="AI-driven interactive prototype design that instantly visualizes ideas, generating prototypes from concept in one click" data-zh="AI驱动的交互式原型设计，一键从概念生成原型，即时可视化想法">AI-driven interactive prototype design that instantly visualizes ideas, generating prototypes from concept in one click</p>
                     <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Smart Prototype Generation</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Flowchart Creation</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>PRD Document Output</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Aesthetic Design Priority</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Smart Prototype Generation" data-zh="智能原型生成">Smart Prototype Generation</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Flowchart Creation" data-zh="流程图创建">Flowchart Creation</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="PRD Document Output" data-zh="PRD文档输出">PRD Document Output</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Aesthetic Design Priority" data-zh="美观设计优先">Aesthetic Design Priority</span></li>
                     </ul>
                     <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
                         <i class="fas fa-arrow-right"></i>
-                        <span>Try MoMA Now</span>
+                        <span data-en="Try MoMA Now" data-zh="立即体验MoMA">Try MoMA Now</span>
                     </button>
                 </div>
                 <div class="glass-effect rounded-xl p-8 hover-lift flex flex-col">
@@ -368,214 +360,235 @@
                         <i class="fas fa-bolt text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 gradient-text">Pika</h3>
-                    <p class="text-gray-400 mb-6">Zero-Barrier Web Application Generator</p>
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">Natural language instantly transforms into interactive web applications, one-click publish online, empowering everyone to be a creator</p>
+                    <p class="text-gray-400 mb-6" data-en="Zero-Barrier Web Application Generator" data-zh="零门槛Web应用生成器">Zero-Barrier Web Application Generator</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed" data-en="Natural language instantly transforms into interactive web applications, one-click publish online, empowering everyone to be a creator" data-zh="自然语言瞬间转化为交互式Web应用，一键发布上线，让人人都是创作者">Natural language instantly transforms into interactive web applications, one-click publish online, empowering everyone to be a creator</p>
                     <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Intelligent Page Generation</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Real-time Preview Interaction</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Quick Publish & Deploy</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Non-professional Friendly</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Intelligent Page Generation" data-zh="智能页面生成">Intelligent Page Generation</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Real-time Preview Interaction" data-zh="实时预览交互">Real-time Preview Interaction</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Quick Publish & Deploy" data-zh="快速发布部署">Quick Publish & Deploy</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Non-professional Friendly" data-zh="非专业人士友好">Non-professional Friendly</span></li>
                     </ul>
                     <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
                         <i class="fas fa-bolt"></i>
-                        <span>Try Pika Now</span>
+                        <span data-en="Try Pika Now" data-zh="立即体验Pika">Try Pika Now</span>
                     </button>
                 </div>
                 <div class="glass-effect rounded-xl p-8 hover-lift flex flex-col">
                     <div class="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-6 tech-border icon-container">
                         <i class="fas fa-code text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">Dex</h3>
-                    <p class="text-gray-400 mb-6">Developer's AI Programming Assistant</p>
-                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">Professional IDE plugin that multiplies programming efficiency, the perfect combination of AI and human intelligence</p>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Haku</h3>
+                    <p class="text-gray-400 mb-6" data-en="Developer's AI Programming Assistant" data-zh="开发者的AI编程助手">Developer's AI Programming Assistant</p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed" data-en="Professional IDE plugin that multiplies programming efficiency, the perfect combination of AI and human intelligence" data-zh="专业IDE插件，倍增编程效率，AI与人类智慧的完美结合">Professional IDE plugin that multiplies programming efficiency, the perfect combination of AI and human intelligence</p>
                     <ul class="space-y-3 text-gray-300 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Intelligent Code Writing</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>AI Conversation Q&A</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Agent Mode Programming</li>
-                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i>Professional Dev Optimization</li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Intelligent Code Writing" data-zh="智能代码编写">Intelligent Code Writing</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="AI Conversation Q&A" data-zh="AI对话问答">AI Conversation Q&A</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Agent Mode Programming" data-zh="Agent模式编程">Agent Mode Programming</span></li>
+                        <li class="flex items-center"><i class="fas fa-star text-yellow-400 mr-3"></i><span data-en="Professional Dev Optimization" data-zh="专业开发优化">Professional Dev Optimization</span></li>
                     </ul>
                     <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 px-6 rounded-xl font-medium hover:scale-105 transition-transform flex items-center justify-center space-x-2 shadow-lg mt-auto">
                         <i class="fas fa-arrow-right"></i>
-                        <span>Try Dex Now</span>
+                        <span data-en="Try Haku Now" data-zh="立即体验Haku">Try Haku Now</span>
                     </button>
                 </div>
             </div>
         </div>        
 
-        <!-- Use Cases Showcase Content -->
-        <div class="max-w-7xl mx-auto px-4">
+        <!-- Product Limitations & Synergy Section -->
+        <div class="max-w-7xl mx-auto px-4 mb-20">
             <!-- Divider Line -->
             <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mb-16"></div>
             
-            <!-- Rapid Idea Validation -->
-            <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
-                <div class="grid lg:grid-cols-5 gap-8 items-center">
-                    <div class="lg:col-span-3">
-                        <div class="flex items-start space-x-6">
-                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center shadow-lg icon-container">
-                                <i class="fas fa-lightbulb text-3xl text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex items-center space-x-4 mb-4">
-                                    <h3 class="text-4xl font-bold text-white">Rapid Idea Validation</h3>
-                                    <div class="time-badge">
-                                        <i class="fas fa-clock mr-2"></i>5min
-                                    </div>
-                                </div>
-                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Got a new idea but unsure if it's feasible? Use MoMA or Pika to quickly generate interactive demo prototypes and instantly validate your creative concepts.</p>
-                                <div class="flex flex-wrap gap-3">
-                                    <button class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
-                                        <i class="fas fa-palette"></i>
-                                        <span>MoMA Prototype Design</span>
-                                    </button>
-                                    <button class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
-                                        <i class="fas fa-code"></i>
-                                        <span>Pika Quick Generation</span>
-                                    </button>
-                                </div>
-                            </div>
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="flex justify-center mb-6">
+                    <div class="star-badge inline-flex items-center space-x-3 px-6 py-3 rounded-full">
+                        <div class="w-8 h-8 star-icon rounded-full flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-sm"></i>
                         </div>
-                    </div>
-                    
-                    <div class="lg:col-span-2">
-                        <div class="glass-effect rounded-2xl p-6 border border-purple-500/30 shadow-lg">
-                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
-                                <i class="fas fa-bullseye mr-3 text-purple-400"></i>Use Cases
-                            </h4>
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Startup Idea Validation</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Product Feature Testing</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">User Experience Prototype</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Investor Demo</span>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="font-bold text-lg" data-en="Why Combination Matters" data-zh="三件套组合无限">Why Combination Matters</span>
                     </div>
                 </div>
+                <h2 class="text-4xl font-bold mb-4 text-white" data-en="Create Unlimited Possibilities" data-zh="创造无限可能">
+                    Create Unlimited Possibilities
+                </h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" data-en="Each tool has its own strengths and limitations, so we adopt a combination approach to achieve exceptional results." data-zh="每款工具都有自己的优势和不足，所以我们采用组合的方案去追求卓越效果。">
+                    Each tool has its own strengths and limitations, so we adopt a combination approach to achieve exceptional results.
+                </p>
             </div>
-            
-            <!-- Simple Project Development -->
-            <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-green-500/20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
-                <div class="grid lg:grid-cols-5 gap-8 items-center">
-                    <!-- Left Project Types -->
-                    <div class="lg:col-span-2">
-                        <div class="glass-effect rounded-2xl p-6 border border-green-500/30 shadow-lg">
-                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
-                                <i class="fas fa-folder-open mr-3 text-green-400"></i>Project Types
-                            </h4>
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Corporate Website</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Personal Portfolio</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Simple Games</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Event Pages</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Right Content -->
-                    <div class="lg:col-span-3">
-                        <div class="flex items-start space-x-6">
-                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center shadow-lg icon-container">
-                                <i class="fas fa-globe text-3xl text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex items-center space-x-4 mb-4">
-                                    <h3 class="text-4xl font-bold text-white">Simple Project Development</h3>
-                                    <div class="time-badge orange">
-                                        <i class="fas fa-clock mr-2"></i>30min
-                                    </div>
-                                </div>
-                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Need to quickly build a website, simple game, or showcase page? The perfect combination is MoMA for prototyping, Pika for code generation and one-click publishing.</p>
-                                <div class="flex flex-wrap gap-3">
-                                    <button class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
-                                        <i class="fas fa-palette"></i>
-                                        <span>MoMA Prototype Design</span>
-                                    </button>
-                                    <button class="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition-transform flex items-center space-x-2 shadow-lg">
-                                        <i class="fas fa-code"></i>
-                                        <span>Pika Code Generation & Publish</span>
-                                    </button>
-                                </div>
-                            </div>
+            <!-- Individual Tool Limitations -->
+            <div class="grid lg:grid-cols-3 gap-6 mb-16">
+                <!-- MoMA Limitations -->
+                <div class="glass-effect rounded-2xl p-6 border border-gray-500/20">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-palette text-white"></i>
                         </div>
+                        <h3 class="text-2xl font-bold gradient-text">MoMA</h3>
+                    </div>
+                    
+                    <!-- Strengths -->
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3 flex items-center">
+                            <i class="fas fa-thumbs-up mr-2"></i><span data-en="Strengths" data-zh="优势">Strengths</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Beautiful, professional designs" data-zh="美观专业的设计">Beautiful, professional designs</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Perfect for presentations" data-zh="完美的演示效果">Perfect for presentations</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Limitations -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-orange-400 mb-3 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-2"></i><span data-en="Limitations" data-zh="局限性">Limitations</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Code generation is basic" data-zh="代码生成能力一般">Code generation is basic</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Limited deployment options" data-zh="部署选项有限">Limited deployment options</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pika Limitations -->
+                <div class="glass-effect rounded-2xl p-6 border border-gray-500/20">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
+                            <i class="fas fa-bolt text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold gradient-text">Pika</h3>
+                    </div>
+                    
+                    <!-- Strengths -->
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3 flex items-center">
+                            <i class="fas fa-thumbs-up mr-2"></i><span data-en="Strengths" data-zh="优势">Strengths</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Excellent code generation" data-zh="出色的代码生成">Excellent code generation</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Quick deployment" data-zh="快速部署">Quick deployment</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Limitations -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-orange-400 mb-3 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-2"></i><span data-en="Limitations" data-zh="局限性">Limitations</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Fine-tuning is challenging" data-zh="精调比较费力">Fine-tuning is challenging</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Design may lack polish" data-zh="设计可能缺乏精致感">Design may lack polish</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Haku Limitations -->
+                <div class="glass-effect rounded-2xl p-6 border border-gray-500/20">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold gradient-text">Haku</h3>
+                    </div>
+                    
+                    <!-- Strengths -->
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold text-green-400 mb-3 flex items-center">
+                            <i class="fas fa-thumbs-up mr-2"></i><span data-en="Strengths" data-zh="优势">Strengths</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Unlimited customization" data-zh="无限精调能力">Unlimited customization</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-star text-green-400 mr-2 text-xs"></i><span data-en="Professional development" data-zh="专业开发能力">Professional development</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Limitations -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-orange-400 mb-3 flex items-center">
+                            <i class="fas fa-exclamation-triangle mr-2"></i><span data-en="Limitations" data-zh="局限性">Limitations</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Higher learning curve" data-zh="有一定使用门槛">Higher learning curve</span></li>
+                            <li class="flex items-center text-sm"><i class="fas fa-minus-circle text-orange-400 mr-2 text-xs"></i><span data-en="Basic prompts = basic results" data-zh="简单输入效果一般">Basic prompts = basic results</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            
-            <!-- Complex Project Solutions -->
-            <div class="glass-effect rounded-3xl p-8 shadow-xl border border-indigo-500/20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
-                <div class="grid lg:grid-cols-5 gap-8 items-center">
-                    <div class="lg:col-span-3">
-                        <div class="flex items-start space-x-6">
-                            <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg icon-container">
-                                <i class="fas fa-cogs text-3xl text-white"></i>
+
+            <!-- Synergy Showcase -->
+            <div class="glass-effect rounded-3xl p-8 border border-cyan-500/30 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+                <!-- Ultimate Combination - Moved to Top -->
+                <div class="mb-8 text-center">
+                    <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full px-8 py-4">
+                        <div class="flex -space-x-1">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center border-2 border-white">
+                                <i class="fas fa-palette text-white text-xs"></i>
                             </div>
-                            <div class="flex-1">
-                                <div class="flex items-center space-x-4 mb-4">
-                                    <h3 class="text-4xl font-bold text-white">Complex Project Solutions</h3>
-                                    <div class="time-badge purple">
-                                        <i class="fas fa-clock mr-2"></i>24 hours
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center border-2 border-white">
+                                <i class="fas fa-bolt text-white text-xs"></i>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center border-2 border-white">
+                                <i class="fas fa-code text-white text-xs"></i>
+                            </div>
+                        </div>
+                        <span class="text-xl font-bold text-white" data-en="All Three = Unlimited Potential" data-zh="组合使用 = 无限潜能">All Three = Unlimited Potential</span>
+                    </div>
+                </div>
+
+                <!-- Use Cases Showcase - Three Cards -->
+                <div class="max-w-7xl mx-auto px-4 mb-8">
+                    <!-- Demo Creation -->
+                    <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-gray-500/20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+                        <div class="grid lg:grid-cols-5 gap-8 items-center">
+                            <div class="lg:col-span-3">
+                                <div class="flex items-start space-x-6">
+                                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg icon-container">
+                                        <i class="fas fa-play text-3xl text-white"></i>
                                     </div>
-                                </div>
-                                <p class="text-gray-300 mb-6 text-lg leading-relaxed">Building full-featured applications? Two approaches available: MoMA+Pika+Dex combined development, or MoMA+Dex combination development, meeting enterprise-level project requirements.</p>
-                                
-                                <div class="space-y-6">
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
-                                            <i class="fas fa-users mr-2 text-purple-400"></i>Approach 1: Team Collaboration
-                                        </h4>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-4 mb-4">
+                                            <h3 class="text-3xl font-bold text-white" data-en="Demo Creation" data-zh="快速想法验证">Demo Creation</h3>
+                                            <div class="time-badge">
+                                                <i class="fas fa-clock mr-2"></i>5min
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-300 mb-6 text-lg leading-relaxed" data-en="Turn your ideas into interactive demos instantly. Perfect for validating concepts, impressing stakeholders, or testing user experience before full development." data-zh="将您的想法瞬间转化为交互式演示。非常适合验证概念、打动利益相关者或在完整开发之前测试用户体验。">Turn your ideas into interactive demos instantly. Perfect for validating concepts, impressing stakeholders, or testing user experience before full development.</p>
+                                        <div class="flex flex-wrap gap-3">
+                                            <button class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl font-medium transition-all flex items-center space-x-2 shadow-lg border border-gray-600">
                                                 <i class="fas fa-palette"></i>
-                                                <span>MoMA Prototype</span>
-                                            </span>
-                                            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
-                                                <i class="fas fa-code"></i>
-                                                <span>Pika Frontend</span>
-                                            </span>
-                                            <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
-                                                <i class="fas fa-server"></i>
-                                                <span>Dex Backend</span>
-                                            </span>
+                                                <span data-en="MoMA Design Demo" data-zh="MoMA设计演示">MoMA Design Demo</span>
+                                            </button>
+                                            <button class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl font-medium transition-all flex items-center space-x-2 shadow-lg border border-gray-600">
+                                                <i class="fas fa-bolt"></i>
+                                                <span data-en="Pika Interactive Demo" data-zh="Pika交互演示">Pika Interactive Demo</span>
+                                            </button>
                                         </div>
                                     </div>
-                                    
-                                    <div>
-                                        <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
-                                            <i class="fas fa-layer-group mr-2 text-purple-400"></i>Approach 2: Full-Stack Development
-                                        </h4>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
-                                                <i class="fas fa-palette"></i>
-                                                <span>MoMA Prototype</span>
-                                            </span>
-                                            <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md">
-                                                <i class="fas fa-code-branch"></i>
-                                                <span>Dex Full-Stack Dev</span>
-                                            </span>
+                                </div>
+                            </div>
+                            
+                            <div class="lg:col-span-2">
+                                <div class="glass-effect rounded-2xl p-6 border border-gray-500/30 shadow-lg">
+                                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                        <i class="fas fa-bullseye mr-3 text-gray-400"></i><span data-en="Perfect For" data-zh="适用场景">Perfect For</span>
+                                    </h4>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Startup Pitch Demos" data-zh="创业路演演示">Startup Pitch Demos</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Product Prototypes" data-zh="产品原型">Product Prototypes</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="User Testing" data-zh="用户测试">User Testing</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Investor Presentations" data-zh="投资者演示">Investor Presentations</span>
                                         </div>
                                     </div>
                                 </div>
@@ -583,79 +596,323 @@
                         </div>
                     </div>
                     
-                    <div class="lg:col-span-2">
-                        <div class="glass-effect rounded-2xl p-6 border border-indigo-500/30 shadow-lg">
-                            <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
-                                <i class="fas fa-star mr-3 text-indigo-400"></i>Complex Project Features
-                            </h4>
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">User System Integration</span>
+                    <!-- Quick Website Builder -->
+                    <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-gray-500/20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+                        <div class="grid lg:grid-cols-5 gap-8 items-center">
+                            <!-- Left Project Types -->
+                            <div class="lg:col-span-2">
+                                <div class="glass-effect rounded-2xl p-6 border border-gray-500/30 shadow-lg">
+                                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                        <i class="fas fa-layer-group mr-3 text-gray-400"></i><span data-en="Popular Projects" data-zh="项目类型">Popular Projects</span>
+                                    </h4>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Business Websites" data-zh="商业网站">Business Websites</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Personal Portfolios" data-zh="个人作品集">Personal Portfolios</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Landing Pages" data-zh="落地页">Landing Pages</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Simple Web Apps" data-zh="简单Web应用">Simple Web Apps</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">Database Setup</span>
+                            </div>
+
+                            <!-- Right Content -->
+                            <div class="lg:col-span-3">
+                                <div class="flex items-start space-x-6">
+                                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg icon-container">
+                                        <i class="fas fa-rocket text-3xl text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-4 mb-4">
+                                                                                         <h3 class="text-3xl font-bold text-white" data-en="Quick Website Builder" data-zh="简单项目开发">Quick Website Builder</h3>
+                                            <div class="time-badge orange">
+                                                <i class="fas fa-clock mr-2"></i>30min
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-300 mb-6 text-lg leading-relaxed" data-en="Build complete websites from idea to deployment. Design with MoMA, generate code with Pika, and launch instantly - no coding experience required." data-zh="从创意到部署，构建完整网站。使用MoMA设计，用Pika生成代码，瞬间发布 - 无需编码经验。">Build complete websites from idea to deployment. Design with MoMA, generate code with Pika, and launch instantly - no coding experience required.</p>
+                                        <div class="flex flex-wrap gap-3">
+                                            <button class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl font-medium transition-all flex items-center space-x-2 shadow-lg border border-gray-600">
+                                                <i class="fas fa-palette"></i>
+                                                <span data-en="MoMA Design" data-zh="MoMA设计">MoMA Design</span>
+                                            </button>
+                                            <button class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl font-medium transition-all flex items-center space-x-2 shadow-lg border border-gray-600">
+                                                <i class="fas fa-bolt"></i>
+                                                <span data-en="Pika Build & Deploy" data-zh="Pika实现&部署">Pika Build & Deploy</span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">API Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Full-Stack Application -->
+                    <div class="glass-effect rounded-3xl p-8 mb-12 shadow-xl border border-gray-500/20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+                        <div class="grid lg:grid-cols-5 gap-8 items-center">
+                            <div class="lg:col-span-3">
+                                <div class="flex items-start space-x-6">
+                                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg icon-container">
+                                        <i class="fas fa-cube text-3xl text-white"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-4 mb-4">
+                                                                                         <h3 class="text-3xl font-bold text-white" data-en="Full-Stack Application" data-zh="复杂项目解决方案">Full-Stack Application</h3>
+                                            <div class="time-badge purple">
+                                                <i class="fas fa-clock mr-2"></i>1 day
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-300 mb-6 text-lg leading-relaxed" data-en="Build enterprise-grade applications with complete functionality. From prototype to production, our tools handle complex workflows, databases, and scalable architecture." data-zh="构建具有完整功能的企业级应用。从原型到生产，我们的工具处理复杂的工作流程、数据库和可扩展架构。">Build enterprise-grade applications with complete functionality. From prototype to production, our tools handle complex workflows, databases, and scalable architecture.</p>
+                                        
+                                        <div class="space-y-6">
+                                            <div>
+                                                <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
+                                                    <i class="fas fa-users mr-2 text-gray-400"></i><span data-en="Team Workflow" data-zh="先生成再精调">Team Workflow</span>
+                                                </h4>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md border border-gray-600">
+                                                        <i class="fas fa-palette"></i>
+                                                        <span data-en="Design" data-zh="Pika生成0-1"></span>
+                                                    </span>
+                                                    <span class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md border border-gray-600">
+                                                        <i class="fas fa-bolt"></i>
+                                                        <span data-en="Frontend" data-zh="Haku精调"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div>
+                                                <h4 class="text-xl font-semibold text-white mb-3 flex items-center">
+                                                    <i class="fas fa-rocket mr-2 text-gray-400"></i><span data-en="Solo Development" data-zh="独立开发">Solo Development</span>
+                                                </h4>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md border border-gray-600">
+                                                        <i class="fas fa-palette"></i>
+                                                        <span data-en="MoMA Design" data-zh="MoMA设计">MoMA Design</span>
+                                                    </span>
+                                                    <span class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-full text-sm flex items-center space-x-1 shadow-md border border-gray-600">
+                                                        <i class="fas fa-code"></i>
+                                                        <span data-en="Haku Full-Stack" data-zh="Haku全栈">Haku Full-Stack</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                                    <span class="text-gray-300 font-medium">High Concurrency Handling</span>
+                            </div>
+                            
+                            <div class="lg:col-span-2">
+                                <div class="glass-effect rounded-2xl p-6 border border-gray-500/30 shadow-lg">
+                                    <h4 class="text-2xl font-bold text-white mb-4 flex items-center">
+                                        <i class="fas fa-star mr-3 text-gray-400"></i><span data-en="Enterprise Features" data-zh="复杂项目特点">Enterprise Features</span>
+                                    </h4>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="User Authentication" data-zh="历史项目依赖">User Authentication</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Database Management" data-zh="数据库管理">Database Management</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="API Integration" data-zh="API集成">API Integration</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                                            <span class="text-gray-300 font-medium" data-en="Scalable Architecture" data-zh="可扩展架构">Scalable Architecture</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- More Combinations Available -->
+                <div class="text-center mb-6">
+                    <div class="flex items-center justify-center space-x-2 text-gray-400 mb-4">
+                        <div class="w-8 h-px bg-gradient-to-r from-transparent to-gray-600"></div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-plus-circle text-cyan-400"></i>
+                            <span class="text-sm font-medium" data-en="More combinations to explore" data-zh="更多组合等待探索">More combinations to explore</span>
+                        </div>
+                        <div class="w-8 h-px bg-gradient-to-l from-transparent to-gray-600"></div>
+                    </div>
+                    
+                    <!-- Example additional combinations -->
+                    <div class="flex justify-center space-x-4 text-xs text-gray-500">
+                        <span class="bg-gray-800/20 px-3 py-1 rounded-full border border-gray-700" data-en="Custom Workflows" data-zh="自定义工作流">Custom Workflows</span>
+                        <span class="bg-gray-800/20 px-3 py-1 rounded-full border border-gray-700" data-en="AI-Enhanced Processes" data-zh="AI增强流程">AI-Enhanced Processes</span>
+                        <span class="bg-gray-800/20 px-3 py-1 rounded-full border border-gray-700" data-en="Team Collaborations" data-zh="团队协作">Team Collaborations</span>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+
+
     </section>
 
     <!-- Pricing Plans Section -->
     <section id="pricing" class="py-20">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-20">Choose Your Perfect Plan</h2>
+            <h2 class="text-4xl font-bold text-center mb-20" data-en="Choose Your Perfect Plan" data-zh="选择您的创作工具计划">Choose Your Perfect Plan</h2>
             <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Free Plan -->
                 <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
-                    <h3 class="text-2xl font-bold mb-4">Free</h3>
-                    <div class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-400">/month</span></div>
-                    <p class="text-gray-400 mb-8">Basic features for personal use</p>
+                    <h3 class="text-2xl font-bold mb-4" data-en="Free" data-zh="免费版">Free</h3>
+                    <div class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-400" data-en="/month" data-zh="/月">/month</span></div>
+                    <p class="text-gray-400 mb-8" data-en="Basic features for personal use" data-zh="个人使用的基础功能">Basic features for personal use</p>
                     <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Limited tool usage</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Basic features</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Community support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i><span data-en="Limited tool usage" data-zh="三种工具限次体验">Limited tool usage</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i><span data-en="Basic features" data-zh="基础功能">Basic features</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i><span data-en="Community support" data-zh="社区支持">Community support</span></li>
                     </ul>
-                    <button class="w-full border border-gray-500 text-gray-300 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-all mt-auto">
+                    <button class="w-full border border-gray-500 text-gray-300 py-3 rounded-xl font-semibold hover:bg-gray-700 transition-all mt-auto" data-en="Get Started" data-zh="开始使用">
                         Get Started
                     </button>
                 </div>
+
+                <!-- Pro Plan (Choose 2 Tools) -->
                 <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
-                    <h3 class="text-2xl font-bold mb-4 gradient-text">Pro</h3>
-                    <div class="text-4xl font-bold mb-6">$29<span class="text-lg text-gray-400">/month</span></div>
-                    <p class="text-gray-400 mb-8">Complete features, team collaboration</p>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text" data-en="Pro" data-zh="专业版">Pro</h3>
+                    <div class="text-4xl font-bold mb-6">$29<span class="text-lg text-gray-400" data-en="/month" data-zh="/月">/month</span></div>
+                    <p class="text-gray-400 mb-8" data-en="Choose any 2 tools combination" data-zh="任选两种工具组合">Choose any 2 tools combination</p>
+                    
+                    <!-- Tool Selection Options -->
+                    <div class="mb-6">
+                        <p class="text-sm text-gray-300 mb-3" data-en="Popular Combinations:" data-zh="热门组合：">Popular Combinations:</p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center text-cyan-400">
+                                <i class="fas fa-palette mr-2"></i>
+                                <span data-en="MoMA + Pika" data-zh="MoMA + Pika">MoMA + Pika</span>
+                            </div>
+                            <div class="flex items-center text-cyan-400">
+                                <i class="fas fa-magic mr-2"></i>
+                                <span data-en="MoMA + Haku" data-zh="MoMA + Haku">MoMA + Haku</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Full access to all three tools</li>
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>All features unlocked</li>
-                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i>Priority technical support</li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i><span data-en="Access to 2 selected tools" data-zh="两个选定工具的访问权限">Access to 2 selected tools</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i><span data-en="Full feature unlock" data-zh="完整功能解锁">Full feature unlock</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i><span data-en="Email support" data-zh="邮件支持">Email support</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-cyan-400 mr-3"></i><span data-en="Switch tools monthly" data-zh="每月可切换工具">Switch tools monthly</span></li>
                     </ul>
-                    <button class="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold glow-button mt-auto">
-                        Upgrade Now
+                    
+                    <!-- Product Selection Modal Trigger Button -->
+                    <button id="proSelectBtn" class="w-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold glow-button mt-auto" data-en="Select Tools & Subscribe" data-zh="选择工具并订阅">
+                        Select Tools & Subscribe
                     </button>
                 </div>
+
+                <!-- Ultra Plan -->
                 <div class="glass-effect rounded-xl p-8 mt-8 flex flex-col">
-                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
-                    <div class="text-4xl font-bold mb-6">Custom<span class="text-lg text-gray-400"> Plan</span></div>
-                    <p class="text-gray-400 mb-8">Enterprise-grade solutions</p>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text" data-en="Ultra" data-zh="旗舰版">Ultra</h3>
+                    <div class="text-4xl font-bold mb-6">$39<span class="text-lg text-gray-400" data-en="/month" data-zh="/月">/month</span></div>
+                    <p class="text-gray-400 mb-8" data-en="Complete access to all three tools" data-zh="完整访问所有三种工具">Complete access to all three tools</p>
                     <ul class="space-y-3 mb-8 flex-grow">
-                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Unlimited usage</li>
-                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Private deployment</li>
-                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Custom development</li>
-                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i>Dedicated account manager</li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i><span data-en="Full access to all three tools" data-zh="完整访问所有三种工具">Full access to all three tools</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i><span data-en="Priority technical support" data-zh="优先技术支持">Priority technical support</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i><span data-en="Advanced integrations" data-zh="高级集成功能">Advanced integrations</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i><span data-en="Team collaboration" data-zh="团队协作">Team collaboration</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-purple-400 mr-3"></i><span data-en="Custom workflows" data-zh="自定义工作流">Custom workflows</span></li>
                     </ul>
-                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-semibold transition-all mt-auto">
-                        Contact Sales
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-xl font-semibold transition-all mt-auto" data-en="Upgrade to Ultra" data-zh="升级到旗舰版">
+                        Upgrade to Ultra
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Selection Modal for Pro Plan -->
+        <div id="productSelectionModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div class="glass-effect rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-600/30">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold gradient-text" data-en="Choose Your 2 Tools" data-zh="选择您的两种工具">Choose Your 2 Tools</h3>
+                    <button id="closeModal" class="text-gray-400 hover:text-white text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <p class="text-gray-300 mb-6" data-en="Select any 2 tools for your Pro subscription:" data-zh="为您的专业版订阅选择任意两种工具：">Select any 2 tools for your Pro subscription:</p>
+                
+                <!-- Tool Selection Grid -->
+                <div class="grid gap-4 mb-8">
+                    <div class="tool-option border border-gray-600 rounded-xl p-4 cursor-pointer hover:border-cyan-400 hover:bg-gray-800/30 transition-all" data-tool="moma">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
+                                <i class="fas fa-palette text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-white">MoMA</h4>
+                                <p class="text-gray-400 text-sm" data-en="Product Manager's Intelligent Design Partner" data-zh="产品经理的智能设计伙伴">Product Manager's Intelligent Design Partner</p>
+                            </div>
+                            <div class="tool-checkbox w-6 h-6 border border-gray-500 rounded flex items-center justify-center">
+                                <i class="fas fa-check text-cyan-400 hidden"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-option border border-gray-600 rounded-xl p-4 cursor-pointer hover:border-cyan-400 hover:bg-gray-800/30 transition-all" data-tool="pika">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-white">Pika</h4>
+                                <p class="text-gray-400 text-sm" data-en="Zero-Barrier Web Application Generator" data-zh="零门槛Web应用生成器">Zero-Barrier Web Application Generator</p>
+                            </div>
+                            <div class="tool-checkbox w-6 h-6 border border-gray-500 rounded flex items-center justify-center">
+                                <i class="fas fa-check text-cyan-400 hidden"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-option border border-gray-600 rounded-xl p-4 cursor-pointer hover:border-cyan-400 hover:bg-gray-800/30 transition-all" data-tool="haku">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-lg font-bold text-white">Haku</h4>
+                                <p class="text-gray-400 text-sm" data-en="Developer's AI Programming Assistant" data-zh="开发者的AI编程助手">Developer's AI Programming Assistant</p>
+                            </div>
+                            <div class="tool-checkbox w-6 h-6 border border-gray-500 rounded flex items-center justify-center">
+                                <i class="fas fa-check text-cyan-400 hidden"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Selected Tools Display -->
+                <div class="mb-6">
+                    <p class="text-gray-300 mb-2" data-en="Selected Tools:" data-zh="选中的工具：">Selected Tools:</p>
+                    <div id="selectedToolsDisplay" class="text-cyan-400 font-medium">
+                        <span data-en="Please select 2 tools" data-zh="请选择2种工具">Please select 2 tools</span>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex space-x-4">
+                    <button id="confirmSelection" class="flex-1 bg-gradient-to-r from-indigo-500 to-pink-500 text-white py-3 rounded-xl font-semibold glow-button disabled:opacity-50 disabled:cursor-not-allowed" disabled data-en="Confirm & Subscribe" data-zh="确认并订阅">
+                        Confirm & Subscribe
+                    </button>
+                    <button id="cancelSelection" class="px-6 py-3 border border-gray-500 text-gray-300 rounded-xl font-semibold hover:bg-gray-700 transition-all" data-en="Cancel" data-zh="取消">
+                        Cancel
                     </button>
                 </div>
             </div>
@@ -665,13 +922,13 @@
     <!-- Call to Action Section -->
     <section class="py-20 bg-gradient-to-r from-indigo-900/30 to-purple-900/30">
         <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="text-5xl font-bold mb-6 glow-text">Ready to Build Something Amazing?</h2>
-            <p class="text-xl text-gray-300 mb-12">Join thousands of developers and creators worldwide</p>
+            <h2 class="text-5xl font-bold mb-6 glow-text" data-en="Ready to Experience Perfect Workflow?" data-zh="准备体验完美的工作流程？">Ready to Experience Perfect Workflow?</h2>
+            <p class="text-xl text-gray-300 mb-12" data-en="Join thousands who discovered that limitations disappear when tools work together" data-zh="加入数千位发现"工具协作让局限消失"的用户">Join thousands who discovered that limitations disappear when tools work together</p>
             <div class="flex justify-center space-x-6">
-                <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-10 py-4 rounded-2xl font-semibold text-lg glow-button">
+                <button class="bg-gradient-to-r from-indigo-500 to-pink-500 text-white px-10 py-4 rounded-2xl font-semibold text-lg glow-button" data-en="Start Free Trial" data-zh="开始免费试用">
                     Start Free Trial
                 </button>
-                <button class="border border-indigo-500 text-indigo-400 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all">
+                <button class="border border-indigo-500 text-indigo-400 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-indigo-500/10 transition-all" data-en="Book Demo" data-zh="预约演示">
                     Book Demo
                 </button>
             </div>
@@ -683,7 +940,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center">
                 <h3 class="text-3xl font-bold gradient-text mb-4">TotemAI</h3>
-                <p class="text-gray-400 mb-8">Intelligent Creative Ecosystem Platform - Where Ideas Come to Life</p>
+                <p class="text-gray-400 mb-8" data-en="Intelligent Creative Ecosystem Platform - Where Ideas Come to Life" data-zh="智能创作生态平台 - 让想法变为现实">Intelligent Creative Ecosystem Platform - Where Ideas Come to Life</p>
                 <div class="flex justify-center space-x-6 mb-8">
                     <a class="text-gray-400 hover:text-cyan-400 transition-colors text-2xl">
                         <i class="fab fa-twitter"></i>
@@ -698,11 +955,202 @@
                         <i class="fab fa-discord"></i>
                     </a>
                 </div>
-                <p class="text-gray-500 text-sm">
+                <p class="text-gray-500 text-sm" data-en="© 2024 TotemAI. All rights reserved. | From Idea to Reality, All in One Place" data-zh="© 2024 TotemAI. 版权所有 | 从想法到现实，一站式解决">
                     © 2024 TotemAI. All rights reserved. | From Idea to Reality, All in One Place
                 </p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        
+        // Initialize page with saved language
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage(currentLanguage);
+            updateLanguageButtons(currentLanguage);
+        });
+
+        // Language switch button click handlers
+        document.querySelectorAll('.lang-switch').forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                switchLanguage(lang);
+                updateLanguageButtons(lang);
+                localStorage.setItem('language', lang);
+            });
+        });
+
+        // Switch language function
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            const elements = document.querySelectorAll('[data-en][data-zh]');
+            
+            elements.forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    element.textContent = text;
+                }
+            });
+        }
+
+        // Update language button styles
+        function updateLanguageButtons(lang) {
+            const enBtn = document.getElementById('langEN');
+            const zhBtn = document.getElementById('langZH');
+            
+            // Reset all buttons
+            [enBtn, zhBtn].forEach(btn => {
+                btn.classList.remove('text-white', 'bg-gray-700', 'border', 'border-gray-500');
+                btn.classList.add('text-gray-400', 'hover:text-gray-300');
+            });
+            
+            // Highlight active button
+            if (lang === 'en') {
+                enBtn.classList.remove('text-gray-400', 'hover:text-gray-300');
+                enBtn.classList.add('text-white', 'bg-gray-700', 'border', 'border-gray-500');
+            } else {
+                zhBtn.classList.remove('text-gray-400', 'hover:text-gray-300');
+                zhBtn.classList.add('text-white', 'bg-gray-700', 'border', 'border-gray-500');
+            }
+        }
+
+        // Product Selection Modal Functionality
+        let selectedTools = [];
+        const maxTools = 2;
+
+        // Open modal when Pro plan button is clicked
+        document.getElementById('proSelectBtn').addEventListener('click', function() {
+            document.getElementById('productSelectionModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal functions
+        function closeModal() {
+            document.getElementById('productSelectionModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            // Reset selections
+            selectedTools = [];
+            updateSelectedToolsDisplay();
+            updateConfirmButton();
+            // Reset visual states
+            document.querySelectorAll('.tool-option').forEach(option => {
+                option.classList.remove('selected', 'border-cyan-400', 'bg-cyan-900/20');
+                option.classList.add('border-gray-600');
+                option.querySelector('.tool-checkbox i').classList.add('hidden');
+            });
+        }
+
+        document.getElementById('closeModal').addEventListener('click', closeModal);
+        document.getElementById('cancelSelection').addEventListener('click', closeModal);
+
+        // Close modal when clicking outside
+        document.getElementById('productSelectionModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Tool selection functionality
+        document.querySelectorAll('.tool-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const toolName = this.getAttribute('data-tool');
+                const checkbox = this.querySelector('.tool-checkbox i');
+                
+                if (selectedTools.includes(toolName)) {
+                    // Deselect tool
+                    selectedTools = selectedTools.filter(tool => tool !== toolName);
+                    this.classList.remove('selected', 'border-cyan-400', 'bg-cyan-900/20');
+                    this.classList.add('border-gray-600');
+                    checkbox.classList.add('hidden');
+                } else if (selectedTools.length < maxTools) {
+                    // Select tool
+                    selectedTools.push(toolName);
+                    this.classList.add('selected', 'border-cyan-400', 'bg-cyan-900/20');
+                    this.classList.remove('border-gray-600');
+                    checkbox.classList.remove('hidden');
+                } else {
+                    // Maximum tools reached - show feedback
+                    this.style.animation = 'shake 0.5s';
+                    setTimeout(() => {
+                        this.style.animation = '';
+                    }, 500);
+                }
+                
+                updateSelectedToolsDisplay();
+                updateConfirmButton();
+            });
+        });
+
+        // Update selected tools display
+        function updateSelectedToolsDisplay() {
+            const display = document.getElementById('selectedToolsDisplay');
+            const toolNames = {
+                'moma': 'MoMA',
+                'pika': 'Pika', 
+                'haku': 'Haku'
+            };
+            
+            if (selectedTools.length === 0) {
+                display.innerHTML = `<span data-en="Please select 2 tools" data-zh="请选择2种工具">${currentLanguage === 'zh' ? '请选择2种工具' : 'Please select 2 tools'}</span>`;
+            } else if (selectedTools.length === 1) {
+                display.innerHTML = `${toolNames[selectedTools[0]]} + <span data-en="(Select 1 more)" data-zh="(请再选择1个)">${currentLanguage === 'zh' ? '(请再选择1个)' : '(Select 1 more)'}</span>`;
+            } else {
+                display.innerHTML = `${toolNames[selectedTools[0]]} + ${toolNames[selectedTools[1]]}`;
+            }
+        }
+
+        // Update confirm button state
+        function updateConfirmButton() {
+            const confirmBtn = document.getElementById('confirmSelection');
+            if (selectedTools.length === 2) {
+                confirmBtn.disabled = false;
+                confirmBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                confirmBtn.disabled = true;
+                confirmBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        // Confirm selection and proceed to subscription
+        document.getElementById('confirmSelection').addEventListener('click', function() {
+            if (selectedTools.length === 2) {
+                // Here you would typically redirect to a payment processor
+                // For now, we'll show a confirmation message
+                const toolNames = {
+                    'moma': 'MoMA',
+                    'pika': 'Pika', 
+                    'haku': 'Haku'
+                };
+                
+                const selectedToolsNames = selectedTools.map(tool => toolNames[tool]).join(' + ');
+                const message = currentLanguage === 'zh' 
+                    ? `您选择了 ${selectedToolsNames}。正在跳转到支付页面...`
+                    : `You selected ${selectedToolsNames}. Redirecting to payment...`;
+                
+                alert(message);
+                
+                // Simulate redirect delay
+                setTimeout(() => {
+                    // Replace with actual payment URL
+                    // window.location.href = '/payment?plan=pro&tools=' + selectedTools.join(',');
+                    console.log('Redirecting to payment with tools:', selectedTools);
+                    closeModal();
+                }, 1500);
+            }
+        });
+
+        // Add shake animation for feedback
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
